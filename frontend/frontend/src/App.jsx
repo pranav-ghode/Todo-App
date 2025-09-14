@@ -15,7 +15,7 @@ function App() {
   }, []);
 
   const fetchTodos = async () => {
-    const res = await axios.get(API_URL);
+    const res = await axios.get(`${API_URL}/api/todos`);
     setTodos(res.data);
   };
 
