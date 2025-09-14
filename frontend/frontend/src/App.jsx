@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
 
-const API_URL = "https://todo-app-yn7p.onrender.com";
+const API_URL = "https://todo-app-yn7p.onrender.com/api/todos";
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -15,7 +15,7 @@ function App() {
   }, []);
 
   const fetchTodos = async () => {
-    const res = await axios.get(`${API_URL}/api/todos`);
+    const res = await axios.get(`${API_URL}`);
     setTodos(res.data);
   };
 
